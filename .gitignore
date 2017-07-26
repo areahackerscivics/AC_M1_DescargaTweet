@@ -1,0 +1,8 @@
+*.pyc
+
+conexionMongo.py
+credencialesTwitter.py
+
+*.rdf
+
+*.json
