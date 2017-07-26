@@ -2,7 +2,6 @@
 # encoding: utf-8
 import tweepy
 import sys
-import jsonpickle
 import os
 import time
 from pymongo import MongoClient#Libreria Mongodb

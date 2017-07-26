@@ -16,6 +16,7 @@ Este módulo fue desearrollado con **Python 2.7.11**
 ##### Dependencias
 
 * [Pymongo V 3.4.0](https://api.mongodb.com/python/current/ "Pymongo 3.4.0")
+* [Tweepy V 3.5.0](http://tweepy.readthedocs.io/en/v3.5.0/ "Tweepy V 3.5.0")
 
 **Nota**: El modulo fue desarrollado usando las librerías que se mencionaron anteriormente, por lo que se recomienda  que para un adecuado funcionamiento se usen  las versiones establecidas.
 
@@ -41,7 +42,9 @@ Como sistema de almacenamiento se usa MongoDB que es una base de datos NoSQL que
 ```
 La colección se crea en tiempo de ejecución del código _DescargaTweet.py_ la primera vez que se ejecuta. Si los nombres de los campos no han sufrido ningún cambio, las siguientes veces que se ejecute el código, tan solo insertará registros.
 
-En el archivo **ConexionMongoPublico.py** del proyecto se indica el nombre de la colección y la base de datos con la que se trabajó, si desea poner otro nombre a la base de datos o a la colección, es necesario que actualice el archivo. Finalmente debe  cambiarle el nombre al archivo a  **ConexionMongo.py** .
+En el archivo **ConexionMongoPublico.py** del proyecto, se indica el nombre de la colección y la base de datos con la que se trabajó, si desea poner otro nombre a la base de datos o a la colección, es necesario que actualice el archivo. Finalmente debe cambiar  el nombre a  **ConexionMongo.py** .
+
+En el archivo **credencialesTwitterPublico.py** del proyecto, se  debe indicar las credenciales de tweeter requeridas para acceder a la API de tweeter. Finalmente debe cambiar  el nombre a  **credencialesTwitter.py**.
 
 El Àrea se abstiene de publicar los tweets descargados hasta el momento, debido a la Ley Orgánica de Protección de Datos.
 
@@ -49,7 +52,7 @@ El Àrea se abstiene de publicar los tweets descargados hasta el momento, debido
 
 Dentro de la carpeta se encuentra el archivo _DescargaTweet.py_ que permite arrancar el proyecto.
 
-Si se van a cambiar las cuentas de las cuales se desea descargar tweets, es necesario agregarlas en el archivo   _cuentas.csv_.
+Si se van a cambiar las cuentas de las cuales se desea descargar tweets es en este archivo donde deben hacerlo  _cuentas.csv_.
 
 
 ## Equipo
