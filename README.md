@@ -5,7 +5,7 @@
 
 Este repositorio contiene el módulo de Descarga de Tweets  del  proyecto "Sistema automático de clasificación de mensajes intercambiados entre la ciudadanía y el Ayuntamiento de València". A partir de los canales de comunicación del Ayuntamiento de València se ha generado un formato que cualquier consistorio puede adaptar a sus necesidades.
 
-El trabajo realizado se concreta en forma de código fuente  que  está diseñada para descargar tweets filtrando por unas  las cuentas que se deseen especificadar.
+El trabajo realizado se concreta en forma de código fuente  que  está diseñada para descargar tweets filtrando por  las cuentas de usuario.
 
 
 ## Guía de uso
@@ -42,9 +42,9 @@ Como sistema de almacenamiento se usa MongoDB que es una base de datos NoSQL que
 ```
 La colección se crea en tiempo de ejecución del código _DescargaTweet.py_ la primera vez que se ejecuta. Si los nombres de los campos no han sufrido ningún cambio, las siguientes veces que se ejecute el código, tan solo insertará registros.
 
-En el archivo **ConexionMongoPublico.py** del proyecto, se indica el nombre de la colección y la base de datos con la que se trabajó, si desea poner otro nombre a la base de datos o a la colección, es necesario que actualice el archivo. Finalmente debe cambiar  el nombre a  **ConexionMongo.py** .
+En el archivo **ConexionMongoPublico.py**, se indica el nombre de la colección y la base de datos con la que se trabajó, si desea poner otro nombre a la base de datos o a la colección, es necesario que actualice el archivo. Finalmente debe cambiar  el nombre a  **ConexionMongo.py** .
 
-En el archivo **credencialesTwitterPublico.py** del proyecto, se  debe indicar las credenciales de tweeter requeridas para acceder a la API de tweeter. Finalmente debe cambiar  el nombre a  **credencialesTwitter.py**.
+En el archivo **credencialesTwitterPublico.py**, se  deben indicar las credenciales de tweeter requeridas para acceder a la API de tweeter. Finalmente debe cambiar  el nombre a  **credencialesTwitter.py**.
 
 El Àrea se abstiene de publicar los tweets descargados hasta el momento, debido a la Ley Orgánica de Protección de Datos.
 
