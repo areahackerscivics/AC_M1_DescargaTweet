@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 import tweepy
-import sys
-import os
+import sys,os
 import time
 from pymongo import MongoClient#Libreria Mongodb
 from datetime import datetime
@@ -49,7 +48,7 @@ for searchQuery in Listaconsulta:
     tweetCount = 0
     midict={}
     print searchQuery
-    print("Descarga max {0} tweets".format(maxTweets))
+    print "Descarga max " ,maxTweets, " tweets"
     while tweetCount < maxTweets:#Mientras que el número de descargas sea menor al número maximo de descargas
         try:
             if (max_id <= 0): #
@@ -71,7 +70,6 @@ for searchQuery in Listaconsulta:
                 break
             for tweet in new_tweets:
                 if (not tweet.retweeted) and ('RT @' not in tweet.text):
-                #print tweet.source.encode('utf-8')+"<>"+tweet.text.encode('utf-8')#Codificar en UTF-8 el mensaje
                     #Crear Objeto
                     tweetdb={
                         "idt":str(tweet.id),
