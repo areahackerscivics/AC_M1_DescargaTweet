@@ -36,6 +36,7 @@ api = tweepy.API(auth) #Autenticandonos en la api, para poder hacer uso de ella
 Listaconsulta=cuentas
 today=datetime.now()
 
+print str(today), " - Inicio descarga tweets "
 for searchQuery in Listaconsulta:
     maxTweets = 10000000 #Número de tweets que deseamos descargar
     cont=0
@@ -48,8 +49,7 @@ for searchQuery in Listaconsulta:
     max_id = -1L
     tweetCount = 0
     midict={}
-    print searchQuery
-    print "Descarga max " ,maxTweets, " tweets"
+    print " ",str(today), " - Inicio", searchQuery
     while tweetCount < maxTweets:#Mientras que el número de descargas sea menor al número maximo de descargas
         try:
             if (max_id <= 0): #
@@ -67,7 +67,6 @@ for searchQuery in Listaconsulta:
                                                 max_id=str(max_id - 1),
                                                 since_id=sinceId)
             if not new_tweets:
-                print(" No se han encontrado mas tweets")
                 break
             for tweet in new_tweets:
                 if (not tweet.retweeted) and ('RT @' not in tweet.text):
@@ -101,5 +100,5 @@ for searchQuery in Listaconsulta:
             continue
         except StopIteration:
             break
-
-print "Descargados ", cont, " tweets el ",str(today)
+    print " ",str(today), " - Fin: ", searchQuery, " descargados", cont, " tweets"
+print str(today), " - Fin descarga tweets "
