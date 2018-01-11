@@ -38,6 +38,7 @@ today=datetime.now()
 
 for searchQuery in Listaconsulta:
     maxTweets = 10000000 #Número de tweets que deseamos descargar
+    cont=0
     tweetsPerQry = 100  # Numero maximo de tweets  que permite descargar la API
     # Si los resultados de un ID específico en adelante son reqd, defina since_id a ese ID
     # Si no se pone, por defecto será el limite inferior al que puede llegar la API
@@ -85,10 +86,12 @@ for searchQuery in Listaconsulta:
                         };
                     try:
                         tweetsdb.insert_one(tweetdb)#Almacenar tweet
+                        cont = cont+1
                     except:
-                        print "este twit ya existe"
+                        continue
+                    #     print "este twit ya existe"
             tweetCount += len(new_tweets)
-            print("Descargado {0} tweets".format(tweetCount))
+            #print("Descargado {0} tweets".format(tweetCount))
             max_id = new_tweets[-1].id
         except tweepy.TweepError:
             time.sleep(60*15)
@@ -99,4 +102,4 @@ for searchQuery in Listaconsulta:
         except StopIteration:
             break
 
-print ("Descargados {0} tweets, Guardados en {1}")
+print "Descargados ", cont, " tweets el ",str(today)
