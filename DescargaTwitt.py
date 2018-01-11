@@ -10,7 +10,8 @@ from credencialesTwitter import *
 
 #Ruta Archivo
 dafile="cuentas.csv"
-datafile = os.path.join(dafile)
+datafile = os.getcwd()+"\\"+dafile #ruta windows
+print datafile
 
 cuentas=leer_archivo(datafile)
 
