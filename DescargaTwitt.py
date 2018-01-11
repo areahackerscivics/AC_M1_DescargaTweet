@@ -36,7 +36,7 @@ api = tweepy.API(auth) #Autenticandonos en la api, para poder hacer uso de ella
 Listaconsulta=cuentas
 today=datetime.now()
 
-print str(today), " - Inicio descarga tweets "
+print str(datetime.now()), " - Inicio descarga tweets "
 for searchQuery in Listaconsulta:
     maxTweets = 10000000 #Número de tweets que deseamos descargar
     cont=0
@@ -100,5 +100,5 @@ for searchQuery in Listaconsulta:
             continue
         except StopIteration:
             break
-    print " ",str(today), " - Fin: ", searchQuery, " descargados", cont, " tweets"
-print str(today), " - Fin descarga tweets "
+    print " ",str(datetime.now()), " - Fin: ", searchQuery, " descargados", cont, " tweets"
+print str(datetime.now()), " - Fin descarga tweets "
