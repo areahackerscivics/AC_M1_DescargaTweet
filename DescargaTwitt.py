@@ -10,13 +10,14 @@ from credencialesTwitter import *
 
 #Ruta Archivo
 dafile="cuentas.csv"
+
 datafile = os.getcwd()+"\\"+dafile #ruta windows
-print datafile
+#datafile=os.path.join("AC_M1_DescargaTweet","cuentas.csv") #ruta crontab linux
 
 cuentas=leer_archivo(datafile)
 
-from conexionMongo import *
 #Conexion a MongoDB
+from conexionMongo import *
 conexion = getConexion()
 client = MongoClient(conexion)
 tdb = getDB()
