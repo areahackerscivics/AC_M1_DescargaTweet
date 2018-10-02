@@ -52,7 +52,7 @@ El Àrea se abstiene de publicar los tweets descargados hasta el momento, debido
 
 Dentro de la carpeta se encuentra el archivo _DescargaTweet.py_ que permite arrancar el proyecto.
 
-Si se van a cambiar las cuentas de las cuales se desea descargar tweets es en este archivo donde deben hacerlo  _cuentas.csv_.
+_cuentas.csv_. contiene los filtros que se tienen en cuenta para realizar la descarga de los tweets, por lo que si se desean cambiar o agregar filtros, las modificaciones se deben hacer en ese archivo.  
 
 
 ## Equipo
